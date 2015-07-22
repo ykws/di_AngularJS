@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja" ng-app>
+<html lang="ja" ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <title>Angularの練習</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="myscript.js"></script>
 </head>
 <body>
     <h1>AngularJSの練習</h1>
-    <input type="text" ng-model="name">
-    <p>こんにちは！{{name}}</p>
-    <p>こんにちは！{{5 * 3}}</p>
+    <div ng-controller="myAppController as myAppCtrl">
+        <p>{{myAppCtrl.users.length}} users.</p>
+    </div>
 </body>
 </html>
