@@ -10,6 +10,11 @@
     <h1>AngularJSの練習</h1>
     <div ng-controller="myAppController as myAppCtrl">
         <p>{{myAppCtrl.users.length}} users.</p>
+        <ul>
+            <li ng-repeat="user in myAppCtrl.users">
+                {{user.name}} {{user.score}}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
