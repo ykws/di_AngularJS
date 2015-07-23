@@ -8,11 +8,13 @@
 </head>
 <body>
     <h1>AngularJSの練習</h1>
-    <div ng-controller="myAppController as myAppCtrl">
-        <p>{{myAppCtrl.users.length}} users.</p>
+    <div ng-controller="myAppController">
+        <p>{{25 * 500|number}}</p>
+        <p>{{25 * 500|currency}}</p>
+        <p>{{today|date:'yyyy-MM-dd'}}</p>
         <ul>
-            <li ng-repeat="user in myAppCtrl.users">
-                {{user.name}} {{user.score}}
+            <li ng-repeat="user in users">
+                {{user.name|uppercase}} {{user.score|number:4}}
             </li>
         </ul>
     </div>
