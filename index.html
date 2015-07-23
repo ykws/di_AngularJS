@@ -5,21 +5,14 @@
     <title>Angularの練習</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="myscript.js"></script>
-    <style>
-      .even {
-        background:#ccc;
-      }
-      .odd {
-        background:red;
-      }
-    </style>
 </head>
 <body>
     <h1>AngularJSの練習</h1>
     <div ng-controller="myAppController">
         <ul>
-            <li ng-repeat="user in users" ng-class-even="'even'" ng-class-odd="'odd'">
-                {{$index+1}} {{$first}} {{$middle}} {{$last}} {{user.name}} {{user.score}}
+            <li ng-repeat="user in users" ng-controller="userItemController">
+                {{user.name}} {{user.score}}
+                <button ng-click="increment()">+1</button>
             </li>
         </ul>
     </div>

@@ -10,4 +10,9 @@ angular.module('myApp', [])
             {"name":"minami", "score":32.8},
             {"name":"yanagi", "score":72.2}
         ];
+    })
+    .controller('userItemController', function($scope) {
+        $scope.increment = function() {
+            $scope.user.score++;
+        }
     });
